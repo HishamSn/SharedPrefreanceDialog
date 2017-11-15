@@ -7,16 +7,23 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
+        android:layout_margin="@dimen/linearlayout_row_margin_5dp"
         android:layout_height="match_parent">
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/recycler_activity_main"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"/>
 
-
-        </android.support.v7.widget.RecyclerView>
+        <Button
+            android:id="@+id/button_main_create"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/button_main_create_20dp"
+            android:background="@color/blue_sky"
+            android:text="@string/main_create"
+            android:textColor="@color/white" />
     </RelativeLayout>
-
 
 </RelativeLayout>

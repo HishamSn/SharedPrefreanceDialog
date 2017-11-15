@@ -6,6 +6,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.example.hisham.recyclerviewexample1.models.Student;
+
 import java.util.List;
 
 /**
@@ -26,23 +28,23 @@ public class StudentAdapterList extends RecyclerView.Adapter<StudentAdapterList.
     @Override
     public StudentViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_student, parent, false);
-        return new StudentViewHolder(view);
+        View row = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_student, parent, false);
+        return new StudentViewHolder(row);
     }
 
     @Override
     public void onBindViewHolder(StudentViewHolder holder, int position) {
-        final Student student= studentList.get(position);
+         Student student= studentList.get(position);
 
         holder.name.setText(student.getName());
-        holder.id.setText(student.getId());
-        holder.age.setText(student.getAge());
-        holder.avg.setText(student.getAvg());
+        holder.id.setText(""+student.getId());
+        holder.age.setText(""+student.getAge());
+        holder.avg.setText(""+student.getAvg());
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return studentList.size();
     }
 
     class StudentViewHolder extends RecyclerView.ViewHolder {
