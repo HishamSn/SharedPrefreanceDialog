@@ -5,4 +5,5 @@
     <dimen name="linearlayout_row_padding_10dp">10dp</dimen>
     <dimen name="cardview_row_margin_5dp">5dp</dimen>
     <dimen name="linearlayout_row_margin_5dp">5dp</dimen>
+    <dimen name="layout_details_student_margin_30dp">30dp</dimen>
 </resources>

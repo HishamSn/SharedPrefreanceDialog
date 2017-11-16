@@ -4,6 +4,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.widget.Toast;
+
 import com.example.hisham.recyclerviewexample1.models.Student;
 
 import java.util.ArrayList;
@@ -11,7 +13,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-   private List<Student> studentList = new ArrayList<>();
+    private List<Student> studentList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +21,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         studentDataFillList();
         initRecyclerView();
+
+        String a = "ddddd";
+        Toast.makeText(this, "" + studentList.get(0).getClass().getName(), Toast.LENGTH_LONG).show();
     }
 
     private void studentDataFillList() {
@@ -34,6 +39,6 @@ public class MainActivity extends AppCompatActivity {
     private void initRecyclerView() {
         RecyclerView recyclerView = findViewById(R.id.recycler_activity_main);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        recyclerView.setAdapter(new StudentAdapterList(studentList));
+        recyclerView.setAdapter(new StudentAdapterList(studentList, this));
     }
 }

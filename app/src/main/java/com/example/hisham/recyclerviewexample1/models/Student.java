@@ -1,10 +1,14 @@
 package com.example.hisham.recyclerviewexample1.models;
 
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+import java.io.Serializable;
+
 /**
  * Created by Hisham on 11/14/2017.
  */
 
-public class Student {
+public class Student implements Serializable{
 
     private String name;
     private Integer id;
@@ -62,6 +66,29 @@ public class Student {
                 ", avg='" + avg + '\'' +
                 '}';
     }
-//TODO hashcode
-    //TODO equals
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+
+        if (o == null || getClass() != o.getClass()) return false;
+        Student student = (Student) o;
+        return new EqualsBuilder()
+                .append(name, student.name)
+                .append(id, student.id)
+                .append(age, student.age)
+                .append(avg, student.avg)
+                .isEquals();
+    }
+
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+                .append(name)
+                .append(id)
+                .append(age)
+                .append(avg)
+                .toHashCode();
+    }
+
 }
