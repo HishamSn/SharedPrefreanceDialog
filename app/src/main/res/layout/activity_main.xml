@@ -1,29 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.example.hisham.recyclerviewexample1.MainActivity">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:weightSum="10"
+                tools:context="com.example.hisham.recyclerviewexample1.activites.MainActivity">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_margin="@dimen/linearlayout_row_margin_5dp"
-        android:layout_height="match_parent">
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/recycler_activity_main"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="0dp"
+            android:layout_weight="8.9"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginRight="@dimen/button_main_create_20dp"
+        android:layout_marginLeft="@dimen/button_main_create_20dp"
+        android:layout_marginBottom="@dimen/button_main_margin_10dp"
+        android:layout_weight="1.1">
+
 
         <Button
             android:id="@+id/button_main_create"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:layout_margin="@dimen/button_main_create_20dp"
             android:background="@color/blue_sky"
             android:text="@string/main_create"
-            android:textColor="@color/white" />
-    </RelativeLayout>
+            android:textColor="@color/white"/>
+    </LinearLayout>
 
-</RelativeLayout>
+</LinearLayout>

@@ -1,4 +1,4 @@
-package com.example.hisham.recyclerviewexample1;
+package com.example.hisham.recyclerviewexample1.adapter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -8,6 +8,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.example.hisham.recyclerviewexample1.R;
+import com.example.hisham.recyclerviewexample1.activites.StudentDetails;
 import com.example.hisham.recyclerviewexample1.models.Student;
 
 import java.util.List;
@@ -25,12 +27,12 @@ public class StudentAdapterList extends RecyclerView.Adapter<StudentAdapterList.
 
     public StudentAdapterList(List<Student> studentList, Context context) {
         this.studentList = studentList;
+        notifyDataSetChanged();
         this.context = context;
     }
 
     @Override
     public StudentViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-
         View row = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_student, parent, false);
         return new StudentViewHolder(row);
     }
@@ -38,11 +40,10 @@ public class StudentAdapterList extends RecyclerView.Adapter<StudentAdapterList.
     @Override
     public void onBindViewHolder(StudentViewHolder holder, int position) {
         Student student = studentList.get(position);
-
         holder.name.setText(student.getName());
-        holder.id.setText("" + student.getId());
-        holder.age.setText("" + student.getAge());
-        holder.avg.setText("" + student.getAvg());
+        holder.id.setText(String.valueOf(student.getId()));
+        holder.age.setText(String.valueOf(student.getAge()));
+        holder.avg.setText(String.valueOf(student.getAvg()));
         rowItemClick(holder);
     }
 
@@ -50,9 +51,14 @@ public class StudentAdapterList extends RecyclerView.Adapter<StudentAdapterList.
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Integer studentID = studentList.get(holder.getAdapterPosition()).getId();
+                if (studentID == null) {
+                    return;
+                }
                 Intent studentDetailsIntent = new Intent(context, StudentDetails.class);
-                studentDetailsIntent.putExtra("dataStudent", studentList.get(holder.getAdapterPosition()));
+                studentDetailsIntent.putExtra("ID", studentID);
                 context.startActivity(studentDetailsIntent);
+
             }
         });
     }

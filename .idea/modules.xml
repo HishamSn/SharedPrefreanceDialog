@@ -3,7 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/recyclerviewexample1.iml" filepath="$PROJECT_DIR$/recyclerviewexample1.iml" />
+      <module fileurl="file://C:\Users\Hisham Snaimeh\Desktop\zbala6\sqliteRecycle\recyclerviewexample1.iml" filepath="C:\Users\Hisham Snaimeh\Desktop\zbala6\sqliteRecycle\recyclerviewexample1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/sqliteRecycle.iml" filepath="$PROJECT_DIR$/.idea/sqliteRecycle.iml" />
     </modules>
   </component>
 </project>

@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:weightSum="10"
-    tools:context="com.example.hisham.recyclerviewexample1.StudentDetails">
+    tools:context="com.example.hisham.recyclerviewexample1.activites.StudentDetails">
 
 
     <TextView
@@ -13,7 +13,7 @@
         android:id="@+id/textView_student_details_name"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_weight="1.5"
         android:background="@color/gray"
         android:gravity="center"
         android:text="@string/student_name"
@@ -24,7 +24,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_margin="@dimen/layout_details_student_margin_30dp"
+        android:layout_margin="@dimen/layout_details_student_margin_20dp"
         android:layout_weight="2"
         android:orientation="vertical">
 
@@ -42,7 +42,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight=".75"
                 android:gravity="center"
-                android:text="ID"
+                android:text="@string/details_student_id"
                 android:textSize="@dimen/button_main_create_20dp"
                 android:textStyle="bold" />
 
@@ -104,6 +104,24 @@
                 android:text=""
                 android:textSize="@dimen/button_main_create_20dp" />
         </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/button_main_create_20dp"
+        android:layout_weight="2">
+
+        <Button
+            android:id="@+id/button_student_details_delete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Delete"
+            />
 
     </LinearLayout>
 </LinearLayout>
