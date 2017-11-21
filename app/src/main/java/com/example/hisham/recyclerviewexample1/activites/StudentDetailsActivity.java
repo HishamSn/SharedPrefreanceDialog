@@ -57,7 +57,7 @@ public class StudentDetailsActivity extends AppCompatActivity implements View.On
             @Override
             public void onClick(View view) {
                 iOSDialog.dismiss();
-                finish();
+                onBackPressed();
             }
         });
         iOSDialog.show();

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">recyclerview.example1</string>
+    <string name="app_name">recycler view example1</string>
     <string name="main_create">CREATE</string>
     <string name="details_student_id">ID</string>
     <string name="details_student.avg">AVG</string>

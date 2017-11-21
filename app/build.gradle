@@ -26,6 +26,9 @@ dependencies {
     implementation 'com.android.support:cardview-v7:26.1.0'
     implementation 'org.apache.commons:commons-lang3:3.6'
     implementation 'com.gdacciaro:iosdialog:1.0.2'
+    implementation 'com.androidsx:rate-me:4.0.3'
+    implementation 'com.stepstone.apprating:app-rating:2.0.0'
+
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'

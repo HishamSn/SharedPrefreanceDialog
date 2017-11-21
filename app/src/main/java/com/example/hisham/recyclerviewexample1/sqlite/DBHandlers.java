@@ -49,6 +49,7 @@ public class DBHandlers extends SQLiteOpenHelper {
         values.put(CONTACTS_COLUMN_AGE, student.getAge());
         values.put(CONTACTS_COLUMN_AVG, student.getAvg());
         db.insert(CONTACTS_TABLE_NAME, null, values);
+        db.close();
     }
 
     public Student getStudent(int id) {
@@ -65,13 +66,13 @@ public class DBHandlers extends SQLiteOpenHelper {
                 cursor.getInt(cursor.getColumnIndex(CONTACTS_COLUMN_ID)),
                 cursor.getInt(cursor.getColumnIndex(CONTACTS_COLUMN_AGE)),
                 cursor.getInt(cursor.getColumnIndex(CONTACTS_COLUMN_AVG)));
+        db.close();
         return student;
     }
 
     public List<Student> getAllStudent() {
         List<Student> studentList = new ArrayList<>();
         String selectQuery = "SELECT  * FROM " + CONTACTS_TABLE_NAME;
-
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.rawQuery(selectQuery, null);
         if (cursor.moveToFirst()) {
@@ -85,6 +86,7 @@ public class DBHandlers extends SQLiteOpenHelper {
                 studentList.add(student);
             } while (cursor.moveToNext());
         }
+        db.close();
         return studentList;
     }
 

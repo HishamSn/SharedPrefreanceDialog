@@ -6,5 +6,6 @@
     <dimen name="cardview_row_margin_5dp">5dp</dimen>
     <dimen name="linearlayout_row_margin_5dp">5dp</dimen>
     <dimen name="layout_details_student_margin_20dp">20dp</dimen>
-    <dimen name="button_main_margin_10dp">10dp</dimen>
+    <dimen name="button_main_margin_5dp">5dp</dimen>
+
 </resources>
