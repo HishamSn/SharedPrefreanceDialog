@@ -4,10 +4,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.widget.Toast;
 
 import com.example.hisham.recyclerviewexample1.*;
-import com.example.hisham.recyclerviewexample1.adapter.StudentAdapterList;
+import com.example.hisham.recyclerviewexample1.adapters.StudentAdapterList;
 import com.example.hisham.recyclerviewexample1.models.Student;
 import com.example.hisham.recyclerviewexample1.sqlite.*;
 

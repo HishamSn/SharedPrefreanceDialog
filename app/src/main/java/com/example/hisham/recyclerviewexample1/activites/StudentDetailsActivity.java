@@ -10,7 +10,7 @@ import com.example.hisham.recyclerviewexample1.models.Student;
 import com.example.hisham.recyclerviewexample1.sqlite.DBHandlers;
 import com.gdacciaro.iOSDialog.iOSDialog;
 
-public class StudentDetails extends AppCompatActivity implements View.OnClickListener {
+public class StudentDetailsActivity extends AppCompatActivity implements View.OnClickListener {
     private DBHandlers db;
     private Student student;
 

@@ -1,4 +1,4 @@
-package com.example.hisham.recyclerviewexample1.adapter;
+package com.example.hisham.recyclerviewexample1.adapters;
 
 import android.content.Context;
 import android.content.Intent;
@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.hisham.recyclerviewexample1.R;
-import com.example.hisham.recyclerviewexample1.activites.StudentDetails;
+import com.example.hisham.recyclerviewexample1.activites.StudentDetailsActivity;
 import com.example.hisham.recyclerviewexample1.models.Student;
 
 import java.util.List;
@@ -55,7 +55,7 @@ public class StudentAdapterList extends RecyclerView.Adapter<StudentAdapterList.
                 if (studentID == null) {
                     return;
                 }
-                Intent studentDetailsIntent = new Intent(context, StudentDetails.class);
+                Intent studentDetailsIntent = new Intent(context, StudentDetailsActivity.class);
                 studentDetailsIntent.putExtra("ID", studentID);
                 context.startActivity(studentDetailsIntent);
 

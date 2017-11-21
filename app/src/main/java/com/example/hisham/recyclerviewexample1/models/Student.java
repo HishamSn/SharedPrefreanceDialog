@@ -58,12 +58,13 @@ public class Student implements Serializable{
 
     @Override
     public String toString() {
-        return "Student{" +
-                "name='" + name + '\'' +
-                ", id='" + id + '\'' +
-                ", age='" + age + '\'' +
-                ", avg='" + avg + '\'' +
-                '}';
+        final StringBuilder sb = new StringBuilder("Student{");
+        sb.append("id=").append(id);
+        sb.append(", name='").append(name).append('\'');
+        sb.append(", age=").append(age);
+        sb.append(", avg=").append(avg);
+        sb.append('}');
+        return sb.toString();
     }
 
     @Override
