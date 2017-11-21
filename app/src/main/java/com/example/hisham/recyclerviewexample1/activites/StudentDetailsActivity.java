@@ -43,7 +43,6 @@ public class StudentDetailsActivity extends AppCompatActivity implements View.On
             case R.id.button_student_details_delete:
                 db.deleteStudent(student);
                 getDialogStudentDeleted();
-                
                 break;
         }
     }
